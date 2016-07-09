@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical"
+    tools:ignore="UnknownIdInLayout,HardcodedText,UselessParent" >
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="作者:" />
+
+        <TextView
+            android:id="@+id/tv_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_author"
+            android:layout_below="@+id/tv_author"
+            android:text="出版日期：" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_author"
+            android:layout_alignRight="@+id/textView3"
+            android:text="内容描述:" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_author"
+            android:layout_toRightOf="@+id/tv_publish"
+            android:singleLine="true"
+            android:hint="内容描述" />
+
+        <TextView
+            android:id="@+id/tv_author_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_publish"
+            android:layout_alignLeft="@+id/tv_content"
+            android:hint="作者" />
+
+        <TextView
+            android:id="@+id/tv_publish_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_publish"
+            android:layout_alignBottom="@+id/tv_publish"
+            android:layout_alignLeft="@+id/tv_content"
+            android:hint="出版日期" />
+    </RelativeLayout>
+
+</LinearLayout>
