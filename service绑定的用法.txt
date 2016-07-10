@@ -1,0 +1,4 @@
+1.新建TestService类继承service,并注册，创建内部类TestBinder继承Binder(在TestBinder类中可编写其他方法或者让TestBinder实现某接口),在TestService的onCreate()方法中
+创建内部类对象binder,在onBind()方法中返回binder;
+2.在MainActivity中创建类InnerServiceConnection实现ServiceConnection接口，在onServiceConnected方法中通过TestService.TestBinder对象获取从TestService里传过来的binder建立Service连接;
+实现bindService(service, conn, flags)方法绑定，或unbindService(conn)解除绑定。
